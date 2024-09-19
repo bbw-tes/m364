@@ -7,7 +7,7 @@ Modul 364 Kompetenznachweise
 <img src="Bilder/Screenshot 2024-09-12 144717.png">
 <img src="Bilder/Screenshot 2024-09-12 145206.png">
 
-![Alt-Text](Bilder/Screenshot 2024-09-12 144447)
-![Alt-Text](Bilder/Screenshot 2024-09-12 144717.png)
-![Alt-Text](Bilder/Screenshot 2024-09-12 145206.png)
+![Lab 4.1-EC2](Bilder/Screenshot 2024-09-12 144447)
+![Lab 4.1-EC2](Bilder/Screenshot 2024-09-12 144717.png)
+![Lab 4.1-EC2](Bilder/Screenshot 2024-09-12 145206.png)
 
