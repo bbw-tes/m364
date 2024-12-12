@@ -1,0 +1,16 @@
+#cloud-config
+users: # BenutzerObjekt (Userdaten)
+  - name: ubuntu # Name des Benutzers --> heisst 'ubuntu'
+    sudo: ALL=(ALL) NOPASSWD:ALL # Benutzer 'ubuntu' erhält sudo-Rechte, ohne das Passwort eigeben zu müssen
+    groups: users, admin # Der Benutzer wird in der Gruppe 'users' & 'admin' hinzugefügt
+    home: /home/ubuntu # Das Home-Verzeichnis des Benutzers wurd auf "/home/ubuntu" pfad gesetzt
+    shell: /bin/bash # Der Shel der der Benutzer 
+    ssh_authorized_keys:
+      # Der öffentliche SSH-Schlüssel, der den zugriff auf den Server ermöglicht
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC0WGP1EZykEtv5YGC9nMiPFW3U3DmZNzKFO5nEu6uozEHh4jLZzPNHSrfFTuQ2GnRDSt+XbOtTLdcj26+iPNiFoFha42aCIzYjt6V8Z+SQ9pzF4jPPzxwXfDdkEWylgoNnZ+4MG1lNFqa8aO7F62tX0Yj5khjC0Bs7Mb2cHLx1XZaxJV6qSaulDuBbLYe8QUZXkMc7wmob3PM0kflfolR3LE7LResIHWa4j4FL6r5cQmFlDU2BDPpKMFMGUfRSFiUtaWBNXFOWHQBC2+uKmuMPYP4vJC9sBgqMvPN/X2KyemqdMvdKXnCfrzadHuSSJYEzD64Cve5Zl9yVvY4AqyBD aws-key       
+ssh_pwauth: false # Das Passwort-Login ist über SSH deaktiviert (um Sicherheit zu erhöhen)
+disable_root: false # Der Root-Benutzer bleibt aktiviert 
+package_update: true # Vor der Installation von Paketen wird ein Paketlisten-Update durchgeführt. 
+packages: #Pakete
+  - curl # Paket 'curl' wird instaliliert (Datenübertragungs Tool)
+  - wget # Paket 'wget' wird installiert (auch ein Datenübertragungs Tool)
