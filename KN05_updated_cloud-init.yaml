@@ -1,16 +1,15 @@
 #cloud-config
-users: # BenutzerObjekt (Userdaten)
-  - name: ubuntu # Name des Benutzers --> heisst 'ubuntu'
-    sudo: ALL=(ALL) NOPASSWD:ALL # Benutzer 'ubuntu' erhält sudo-Rechte, ohne das Passwort eigeben zu müssen
-    groups: users, admin # Der Benutzer wird in der Gruppe 'users' & 'admin' hinzugefügt
-    home: /home/ubuntu # Das Home-Verzeichnis des Benutzers wurd auf "/home/ubuntu" pfad gesetzt
-    shell: /bin/bash # Der Shel der der Benutzer 
+users: 
+  - name: ubuntu 
+    sudo: ALL=(ALL) NOPASSWD:ALL
+    groups: users, admin 
+    home: /home/ubuntu 
+    shell: /bin/bash 
     ssh_authorized_keys:
-      # Der öffentliche SSH-Schlüssel, der den zugriff auf den Server ermöglicht
       - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCirIXTGf/nrpg1mlNFdClQelCJk7ReZaNPglk0pSqV7t8wLpJ8jpOzmRQAeNnW7YHDtxxmfV6EJmGcE4MdJHctlRR/fy+uncXbjHzTAJh90JrxKG0IdRb1/4B3M3G59Z9r0Ra5Z1ZGyjb378CP5xSA6ReEnIOl+MH3lzry2ZK59MIdKnhUyA0KpDrUaXrADNn6ou01jC5379YSzyrIVhyi/BKRZbMxljBIlSa4Uq2W6Zyf1d/dd9ynkOYJACOlRGONnYCahbFD6zzzVE2XYTCgTc3gYjSF/0y9//uPxrkM4m7uX0/OX6SasqE1ibsUdGyTV0hRPrv0ia0ZknFFChw1
-ssh_pwauth: false # Das Passwort-Login ist über SSH deaktiviert (um Sicherheit zu erhöhen)
-disable_root: false # Der Root-Benutzer bleibt aktiviert 
-package_update: true # Vor der Installation von Paketen wird ein Paketlisten-Update durchgeführt. 
-packages: #Pakete
-  - curl # Paket 'curl' wird instaliliert (Datenübertragungs Tool)
-  - wget # Paket 'wget' wird installiert (auch ein Datenübertragungs Tool)
+ssh_pwauth: false 
+disable_root: false 
+package_update: true  
+packages: 
+  - curl 
+  - wget 
